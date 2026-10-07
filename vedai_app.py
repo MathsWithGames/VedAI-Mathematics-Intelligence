@@ -28,6 +28,10 @@ if student_name:
     for score in scores:
         if score < weakest_score:
             weakest_score = score
+    st.write("### Student Performance")
+
+    for topic, score in zip(maths_data["Topic"], scores):
+        st.write(topic, ":", score, "%")
 
     for topic, score in zip(maths_data["Topic"], scores):
         if score == weakest_score:
